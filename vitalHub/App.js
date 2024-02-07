@@ -5,6 +5,8 @@ import { Login } from "./src/screens/Login/Login";
 import {
   useFonts,
   MontserratAlternates_600SemiBold,
+  MontserratAlternates_500Medium,
+  MontserratAlternates_700Bold,
 } from "@expo-google-fonts/montserrat-alternates";
 
 const Stack = createNativeStackNavigator();
@@ -12,6 +14,8 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
     MontserratAlternates_600SemiBold,
+    MontserratAlternates_500Medium,
+    MontserratAlternates_700Bold,
   });
 
   if (!fontsLoaded && !fontError) {

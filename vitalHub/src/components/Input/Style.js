@@ -10,6 +10,6 @@ export const Input = styled.TextInput.attrs({
   border: 2px solid #49b3ba;
   border-radius: 5px;
   font-size: 16px;
-  font-size: "MontserratAlternates_600SemiBold";
+  font-family: "MontserratAlternates_600SemiBold";
   color: #34898f;
 `;
