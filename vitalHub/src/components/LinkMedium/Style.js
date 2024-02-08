@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const ButtonLinkMedium = styled.TouchableOpacity`
+  width: 90%;
+`;
+
 export const LinkMedium = styled.Text`
   color: #8c8a97;
   font-size: 14px;

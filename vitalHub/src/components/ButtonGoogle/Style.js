@@ -7,7 +7,7 @@ export const ButtonGoogle = styled.TouchableOpacity`
   height: 53px;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  
   border-radius: 5px;
   flex-direction: row;
   gap: 10px;

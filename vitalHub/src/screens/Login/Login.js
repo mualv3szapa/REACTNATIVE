@@ -6,12 +6,20 @@ import {
 } from "../../components/ButtonGoogle/Style";
 import { Container } from "../../components/Container/Style";
 import { Input } from "../../components/Input/Style";
-import { LinkMedium } from "../../components/LinkMedium/Style";
+import {
+  ButtonLinkMedium,
+  LinkMedium,
+} from "../../components/LinkMedium/Style";
 import { Logo } from "../../components/Logo/Style";
 import { Title } from "../../components/Title/Style";
-import { ContentAccount, TextAccount, TextAccount2 } from "../../components/ContentAccount/Style";
+import {
+  ContentAccount,
+  TextAccount,
+  TextAccount2,
+} from "../../components/ContentAccount/Style";
+import { TouchableOpacity } from "react-native";
 
-export const Login = () => {
+export const Login = ({ navigation }) => {
   return (
     <Container>
       <Logo source={require("../../assets/logo.png")} />
@@ -21,8 +29,9 @@ export const Login = () => {
 
       <Input placeholder="senha" />
 
-      <LinkMedium>Esqueceu sua senha?</LinkMedium>
-
+      <ButtonLinkMedium onPress={() => navigation.navigate("PasswordForgot")}>
+        <LinkMedium>Esqueceu sua senha?</LinkMedium>
+      </ButtonLinkMedium>
       <Button>
         <ButtonTitle>Entrar</ButtonTitle>
       </Button>
@@ -40,7 +49,9 @@ export const Login = () => {
 
       <ContentAccount>
         <TextAccount>Não tem conta? </TextAccount>
-        <TextAccount2>Crie uma agora!</TextAccount2>
+        <TouchableOpacity onPress={() => navigation.navigate("CreateAccount")}>
+          <TextAccount2>Crie uma agora!</TextAccount2>
+        </TouchableOpacity>
       </ContentAccount>
     </Container>
   );
