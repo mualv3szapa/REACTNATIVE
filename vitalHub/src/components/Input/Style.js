@@ -28,7 +28,7 @@ export const InputCodeBox = styled.View`
 `;
 
 export const InputCode = styled.TextInput.attrs({
-  placeholderTextColor: "#34898F"
+  placeholderTextColor: "#33303E"
 })`
   font-family: "Quicksand_600SemiBold";
   font-size: 40px;

@@ -16,6 +16,7 @@ import {
 import { PasswordForgot } from "./src/screens/PasswordForgot/PasswordForgot";
 import { EmailCode } from "./src/screens/EmailCode/EmailCode";
 import { PasswordReset } from "./src/screens/PasswordReset/PasswordReset";
+import { UserScreen } from "./src/screens/UserScreen/UserScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -71,6 +72,11 @@ export default function App() {
           name="PasswordReset"
           component={PasswordReset}
           options={{ title: "PasswordReset" }}
+        />
+        <Stack.Screen
+          name="UserScreen"
+          component={UserScreen}
+          options={{ title: "UserScreen" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

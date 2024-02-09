@@ -23,6 +23,10 @@ export const Navegacao = ({navigation}) => {
                 title="PasswordReset"
                 onPress={() => navigation.navigate("PasswordReset")}
             />
+            <Button 
+                title="UserScreen"
+                onPress={() => navigation.navigate("UserScreen")}
+            />
         </View>
     );
 }
