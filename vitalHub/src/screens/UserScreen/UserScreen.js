@@ -1,3 +1,4 @@
+import { Button, ButtonTitle } from "../../components/Button/Style";
 import { Container, ContainerUser } from "../../components/Container/Style";
 import {
   InputInfo,
@@ -15,7 +16,7 @@ import {
 } from "../../components/UserName/Style";
 import { UserPhoto } from "../../components/UserPhoto/Style";
 
-export const UserScreen = () => {
+export const UserScreen = ({navigation}) => {
   return (
     <ContainerUser>
       <Container>
@@ -64,6 +65,15 @@ export const UserScreen = () => {
             </InputInfoSmall>
           </InputInfoBoxSmall>
         </InputInfoBox2>
+
+        <Button>
+          <ButtonTitle>Salvar</ButtonTitle>
+        </Button>
+        <Button onPress={() => navigation.navigate("UserScreenEdit")}>
+          <ButtonTitle>editar</ButtonTitle>
+        </Button>
+
+
       </Container>
     </ContainerUser>
   );

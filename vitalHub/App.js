@@ -17,6 +17,7 @@ import { PasswordForgot } from "./src/screens/PasswordForgot/PasswordForgot";
 import { EmailCode } from "./src/screens/EmailCode/EmailCode";
 import { PasswordReset } from "./src/screens/PasswordReset/PasswordReset";
 import { UserScreen } from "./src/screens/UserScreen/UserScreen";
+import { UserScreenEdit } from "./src/screens/UserScreenEdit/UserScreenEdit";
 
 const Stack = createNativeStackNavigator();
 
@@ -77,6 +78,11 @@ export default function App() {
           name="UserScreen"
           component={UserScreen}
           options={{ title: "UserScreen" }}
+        />
+        <Stack.Screen
+          name="UserScreenEdit"
+          component={UserScreenEdit}
+          options={{ title: "UserScreenEdit" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

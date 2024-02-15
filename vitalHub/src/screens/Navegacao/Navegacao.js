@@ -27,6 +27,10 @@ export const Navegacao = ({navigation}) => {
                 title="UserScreen"
                 onPress={() => navigation.navigate("UserScreen")}
             />
+            <Button 
+                title="UserScreenEdit"
+                onPress={() => navigation.navigate("UserScreenEdit")}
+            />
         </View>
     );
 }
