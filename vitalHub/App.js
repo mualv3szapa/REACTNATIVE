@@ -18,6 +18,8 @@ import { EmailCode } from "./src/screens/EmailCode/EmailCode";
 import { PasswordReset } from "./src/screens/PasswordReset/PasswordReset";
 import { UserScreen } from "./src/screens/UserScreen/UserScreen";
 import { UserScreenEdit } from "./src/screens/UserScreenEdit/UserScreenEdit";
+import { HomeScreen_Doctor } from "./src/screens/HomeScreen - Doctor/HomeScreen_Doctor";
+// import { MedicalRecord } from "./src/screens/MedicalRecord/MedicalRecord";
 
 const Stack = createNativeStackNavigator();
 
@@ -84,6 +86,17 @@ export default function App() {
           component={UserScreenEdit}
           options={{ title: "UserScreenEdit" }}
         />
+        
+        <Stack.Screen
+          name="HomeScreen_Doctor"
+          component={HomeScreen_Doctor}
+          options={{ title: "HomeScreen_Doctor" }}
+        />
+        {/* <Stack.Screen
+          name="MedicalRecord"
+          component={MedicalRecord}
+          options={{ title: "MedicalRecord" }}
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

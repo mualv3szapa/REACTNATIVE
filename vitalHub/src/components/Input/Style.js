@@ -14,10 +14,9 @@ export const Input = styled.TextInput.attrs({
   color: #34898f;
 `;
 
-
 export const InputCodeBox = styled.View`
   width: 90%;
-  height: 62px; 
+  height: 62px;
   align-items: center;
   justify-content: center;
   flex-direction: row;
@@ -28,7 +27,7 @@ export const InputCodeBox = styled.View`
 `;
 
 export const InputCode = styled.TextInput.attrs({
-  placeholderTextColor: "#33303E"
+  placeholderTextColor: "#33303E",
 })`
   font-family: "Quicksand_600SemiBold";
   font-size: 40px;
@@ -37,6 +36,41 @@ export const InputCode = styled.TextInput.attrs({
   border: 2px solid #77cacf;
   border-radius: 5px;
   padding-left: 20px;
-
-
 `;
+
+export const InputUserEdit = styled.TextInput.attrs({
+  placeholderTextColor: "#33303E"
+})`
+  width: 100%;
+  height: 53px;
+
+  background-color: #f5f3f3;
+  color: #33303e;
+
+  font-size: 14px;
+  font-family: "MontserratAlternates_500Medium";
+
+  border-radius: 5px;
+  padding-left: 20px;
+
+  
+`;
+export const InputUserEditSmall = styled.TextInput.attrs({
+  placeholderTextColor: "#33303E"
+})`
+  width: 100%;
+  height: 53px;
+
+  background-color: #f5f3f3;
+  color: #33303e;
+
+  font-size: 14px;
+  font-family: "MontserratAlternates_500Medium";
+
+  border-radius: 5px;
+  padding-left: 20px;
+
+  
+`;
+
+

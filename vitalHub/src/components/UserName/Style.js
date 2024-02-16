@@ -24,8 +24,18 @@ export const UserName = styled.Text`
 export const UserNameEmail = styled.Text`
   width: 168px;
   height: 18px;
-  color: #4E4B59;
+  color: #4e4b59;
   font-size: 14px;
   font-family: "Quicksand_500Medium";
   text-align: center;
+`;
+
+export const UserNameMedicalReportBox = styled.View``;
+
+export const UserNameMedicalReport = styled.Text`
+  width: 146px;
+  height: 24px;
+
+  font-size: 20px;
+  font-family: "MontserratAlternates_600SemiBold";
 `;
