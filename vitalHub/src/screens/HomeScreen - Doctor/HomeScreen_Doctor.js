@@ -8,9 +8,14 @@ import {
   DoctorNameHeader,
   Welcome,
 } from "../../components/Header/Style";
-import { StyledCalendarStrip } from "../../components/CalendarHome/Style";
+import CalendarHome from "../../components/CalendarHome/CalendarHome";
+import { useState } from "react";
+import { ButtonFilterBox } from "./Style";
+import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListAppointment";
 
 export const HomeScreen_Doctor = () => {
+  const [statusLista, setStatusLista] = useState("pendente");
+
   return (
     <Container>
       <BlueGradientHeader>
@@ -33,7 +38,25 @@ export const HomeScreen_Doctor = () => {
         />
       </BlueGradientHeader>
 
-      <StyledCalendarStrip />
+      <CalendarHome />
+
+      <ButtonFilterBox>
+        <BtnListAppointment
+          textButton={"Agendadas"}
+          clickButton={statusLista === "pendente"}
+          onPress={() => setStatusLista("pendente")}
+        />
+        <BtnListAppointment
+          textButton={"Realizadas"}
+          clickButton={statusLista === "pendente"}
+          onPress={() => setStatusLista("pendente")}
+        />
+        <BtnListAppointment
+          textButton={"Canceladas"}
+          clickButton={statusLista === "pendente"}
+          onPress={() => setStatusLista("pendente")}
+        />
+      </ButtonFilterBox>
     </Container>
   );
 };

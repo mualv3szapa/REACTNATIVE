@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-
+import { StyledCalendarStrip } from "./Style";
 // import lib moment
 import moment from "moment";
 
@@ -118,4 +118,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CalendarList;
+export default CalendarHome;

@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+
+
+// botões de login da pagina login
 export const Button = styled.TouchableOpacity`
   background-color: #496bba;
   width: 90%;
@@ -17,3 +20,5 @@ export const ButtonTitle = styled.Text`
   font-family: "MontserratAlternates_700Bold";
   text-transform: uppercase;
 `;
+
+
