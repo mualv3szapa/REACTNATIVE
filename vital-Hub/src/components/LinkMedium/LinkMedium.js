@@ -3,6 +3,12 @@ import styled from "styled-components";
 export const ButtonLinkMedium = styled.TouchableOpacity`
   width: 90%;
 `;
+export const ButtonLinkMediumCancel = styled.TouchableOpacity`
+  width: 75px;
+  
+  align-items: center;
+  justify-content: center;
+`;
 
 export const LinkMedium = styled.Text`
   color: #8c8a97;
