@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Input = styled.TextInput.attrs({
   placeholderTextColor: "#34898f",
 })`
-  width: 90%;
+  /* width: 90%; */
   height: 53px;
   margin-top: 15px;
   padding: 16px;
@@ -67,4 +67,23 @@ export const InputUserEditSmall = styled.TextInput.attrs({
 
   border-radius: 5px;
   padding-left: 20px;
+`;
+export const InputBig = styled.TextInput.attrs({
+  placeholderTextColor: "#34898F",
+})`
+  width: 100%;
+  height: 121px;
+
+  /* background-color: #f5f3f3; */
+  color: #34898f;
+
+  font-size: 14px;
+  font-family: "MontserratAlternates_600SemiBold";
+
+  border-radius: 5px;
+  padding-left: 20px;
+  /* padding-top: -100px; */
+  padding-bottom: 80px;
+
+  border: 2px solid #49b3ba;
 `;

@@ -103,7 +103,10 @@ export const HomeScreen_Doctor = () => {
 
       {/* modal ver prontuário */}
 
-      <MedicalRecordModal />
+      <MedicalRecordModal 
+        visible={showModalAppointment}
+        setshowModalAppointment={setshowModalAppointment}
+      />
     </Container>
     // </ContainerUser>
   );

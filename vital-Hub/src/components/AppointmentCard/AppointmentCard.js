@@ -22,11 +22,11 @@ export const AppointmentCard = ({
   return (
     // container principal
     <ContainerCardsList>
-      <ProfileImage source={{ uri: "https://github.com/Gustavoozz.png" }} />
+      <ProfileImage source={require("../../assets/ModalUserPhoto.png")} />
 
       <ContentCard>
         <DataProfileCard>
-          <ProfileName>Gustavo Magalhães</ProfileName>
+          <ProfileName>Niccole Sarga</ProfileName>
 
           <ProfileData>
             <TextAge>19 anos</TextAge>
@@ -52,7 +52,7 @@ export const AppointmentCard = ({
               <ButtonText situacao={situacao}>Cancelar</ButtonText>
             </ButtonCard>
           ) : (
-            <ButtonCard>
+            <ButtonCard onPress={onPressAppointment}>
               <ButtonText situacao={situacao}>Ver prontuário</ButtonText>
             </ButtonCard>
           )}

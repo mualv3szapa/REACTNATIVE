@@ -8,6 +8,8 @@ export const ButtonLinkMediumCancel = styled.TouchableOpacity`
   
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
 `;
 
 export const LinkMedium = styled.Text`

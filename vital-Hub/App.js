@@ -25,6 +25,7 @@ import { PasswordReset } from "./src/screens/PasswordReset/PasswordReset";
 import { UserScreen } from "./src/screens/UserScreen/UserScreen";
 import { UserScreenEdit } from "./src/screens/UserScreenEdit/UserScreenEdit";
 import { HomeScreen_Doctor } from "./src/screens/HomeScreen_Doctor/HomeScreen_Doctor";
+import { MedicalRecordScreen } from "./src/screens/MedicalRecordScreen/MedicalRecordScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -94,6 +95,13 @@ export default function App() {
           name="HomeScreen_Doctor"
           component={HomeScreen_Doctor}
           options={{ title: "HomeScreen_Doctor" }}
+        />
+        <Stack.Screen
+          name="MedicalRecordScreen"
+          component={MedicalRecordScreen}
+          options={{
+            title: "MedicalRecordScreen",
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

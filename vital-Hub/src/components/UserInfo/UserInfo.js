@@ -16,10 +16,19 @@ export const InfoBox2 = styled.View`
   flex-direction: row;
   justify-content: space-between;
 `;
+export const InfoBox3 = styled.View`
+  width: 90%;
+  height: 151px;
+  margin-top: 30px;
+  
+  gap: 10px;
+  
+  justify-content: space-between;
+`;
 
 export const InfoTitle = styled.Text`
   font-size: 16px;
-  width: 158px;
+  /* width: 158px; */
   height: 20px;
   font-family: "Quicksand_600SemiBold";
   color: #000000;
