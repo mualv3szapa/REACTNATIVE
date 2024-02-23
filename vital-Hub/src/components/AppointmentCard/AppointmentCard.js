@@ -61,3 +61,51 @@ export const AppointmentCard = ({
     </ContainerCardsList>
   );
 };
+
+export const AppointmentCardDoctor = ({
+  situacao = "pendente",
+  onPressCancel,
+  onPressAppointment,
+}) => {
+  return (
+    // container principal
+    <ContainerCardsList>
+      <ProfileImage source={require("../../assets/DoctorImageSmall.png")} />
+
+      <ContentCard>
+        <DataProfileCard>
+          <ProfileName>Dr. Claudio</ProfileName>
+
+          <ProfileData>
+            <TextAge>22 anos</TextAge>
+            <TextBold>Rotina</TextBold>
+          </ProfileData>
+        </DataProfileCard>
+
+        <ViewRow>
+          <ClockCard situacao={situacao}>
+            <AntDesign
+              name="clockcircle"
+              size={14}
+              color={situacao == "pendente" ? "#49B3BA" : "#8C8A97"}
+            />
+            <TextBold situacao={situacao}>14:00</TextBold>
+          </ClockCard>
+
+          {/* valida e mostra o tipo de botão conforme a situação da consulta */}
+          {situacao == "cancelado" ? (
+            <></>
+          ) : situacao == "pendente" ? (
+            <ButtonCard onPress={onPressCancel}>
+              <ButtonText situacao={situacao}>Cancelar</ButtonText>
+            </ButtonCard>
+          ) : (
+            <ButtonCard onPress={onPressAppointment}>
+              <ButtonText situacao={situacao}>Ver prontuário</ButtonText>
+            </ButtonCard>
+          )}
+        </ViewRow>
+      </ContentCard>
+    </ContainerCardsList>
+  );
+};

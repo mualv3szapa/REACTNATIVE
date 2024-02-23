@@ -25,7 +25,7 @@ export const DoctorInfoBoxHeader = styled.View`
   gap: 10px;
 `;
 export const DoctorInfoBoxTextHeader = styled.View`
-  width: 93px;
+  /* width: 93px; */
   height: 41px;
   padding-top: 10px;
 `;
@@ -45,7 +45,7 @@ export const Welcome = styled.Text`
 `;
 
 export const DoctorNameHeader = styled.Text`
-  width: 103px;
+  /* width: 103px; */
   height: 20px;
   font-size: 16px;
   font-family: "MontserratAlternates_600SemiBold";
