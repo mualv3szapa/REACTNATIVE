@@ -17,6 +17,12 @@ import { ListComponent } from "../../components/List/ListComponent";
 import { AppointmentCardDoctor } from "../../components/AppointmentCard/AppointmentCard";
 import { CancelattionModal } from "../../components/CancelattionModal/CancelattionModal";
 import { MedicalRecordModal } from "../../components/MedicalRecordModal/MedicalRecordModal";
+import {
+  ModalSCheduleAppointmentBox,
+  ModalScheduleAppointment,
+} from "../../components/ModalScheduleAppointment/ModalScheduleAppointment";
+import { FontAwesome } from "@expo/vector-icons";
+import { ScheduleAppointmentModal } from "../../components/ModalScheduleAppointment/ScheduleAppointmentModal";
 
 const Consultas = [
   { id: 1, nome: "Carlos", situacao: "pendente" },
@@ -30,6 +36,8 @@ export const HomeScreen_Patient = () => {
   const [statusLista, setStatusLista] = useState("pendente");
   const [showModalCancel, setshowModalCancel] = useState(false);
   const [showModalAppointment, setshowModalAppointment] = useState(false);
+  const [showModalScheduleAppointment, setShowModalScheduleAppointment] =
+    useState(true);
 
   return (
     <Container>
@@ -96,6 +104,19 @@ export const HomeScreen_Patient = () => {
       <MedicalRecordModal
         visible={showModalAppointment}
         setshowModalAppointment={setshowModalAppointment}
+      />
+
+      <ModalSCheduleAppointmentBox>
+        <ModalScheduleAppointment
+          onPress={() => setShowModalScheduleAppointment(true)}
+        >
+          <FontAwesome name="stethoscope" size={32} color="#ffffff" />
+        </ModalScheduleAppointment>
+      </ModalSCheduleAppointmentBox>
+
+      <ScheduleAppointmentModal
+        visible={showModalScheduleAppointment}
+        setShowModalScheduleAppointment={setShowModalScheduleAppointment}
       />
     </Container>
   );

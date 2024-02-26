@@ -8,27 +8,26 @@ export const PatientModal = styled.View`
 `;
 
 export const ModalContent = styled.View`
-    padding: 30px 30px 10px;
-    width: 90%;
-    border-radius: 10px;
-    background-color: #fff;
-    align-items: center;
-    gap: 10px;
+  padding: 30px 30px 10px;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #fff;
+  align-items: center;
+  gap: 10px;
 `;
 
 export const ModalText = styled.Text`
-    width: 270px;
-    font-size: 16px;
-    color: #5f5c6b;
-    line-height: 22px;
-    text-align: center;
-    margin-top: 10px;
+  width: 270px;
+  font-size: 16px;
+  color: #5f5c6b;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 10px;
 `;
 export const ModalText2 = styled.Text`
-   
-    font-size: 16px;
-    color: #5f5c6b;
-    line-height: 22px;
-    text-align: center;
-    margin-top: 10px;
+  font-size: 16px;
+  color: #5f5c6b;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 10px;
 `;
