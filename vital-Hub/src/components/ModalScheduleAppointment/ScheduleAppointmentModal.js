@@ -3,7 +3,9 @@
 import { Modal, TouchableOpacity } from "react-native";
 import {
   ButtonConfirmSchedule,
+  CancelButton,
   ModalScheduleQuery,
+  ModalTitle,
   ModalTransparent,
   QueryInput,
   QueryOptions,
@@ -14,16 +16,27 @@ import {
   TextOption,
 } from "./Style";
 import { Title } from "../Title/Title";
-import { ButtonLinkMediumCancel } from "../LinkMedium/LinkMedium";
+import { ButtonLinkMediumCancel, LinkMedium } from "../LinkMedium/LinkMedium";
 import { ButtonTitle } from "../Button/Button";
 
-export const ScheduleAppointmentModal = ({ visible, setShowModalScheduleAppointment, ...rest }) => {
+export const ScheduleAppointmentModal = ({
+  visible,
+  setShowModalScheduleAppointment,
+  ...rest
+}) => {
   return (
     <Modal {...rest} visible={visible} animationType="fade" transparent={true}>
       <ModalTransparent>
         <ModalScheduleQuery>
-          <Title>Agendar Consulta</Title>
+          <ModalTitle>Agendar Consulta</ModalTitle>
 
+          {/* <QueryQuestions>
+            <Question>Informe o tipo da consulta</Question>
+            <QueryInput
+              placeholder="Tipo de consulta"
+              placeholderTextColor="#34898F"
+            />
+          </QueryQuestions> */}
           <QueryQuestions>
             <QuestionContainer>
               <Question>Qual o nível da consulta</Question>
@@ -63,9 +76,11 @@ export const ScheduleAppointmentModal = ({ visible, setShowModalScheduleAppointm
             <ButtonTitle>CONTINUAR</ButtonTitle>
           </ButtonConfirmSchedule>
 
-          <ButtonLinkMediumCancel
-            onPress={() => setShowModalSchedule(false)}
-          ></ButtonLinkMediumCancel>
+          <CancelButton
+            onPress={() => setShowModalScheduleAppointment(false)}
+          >
+            <LinkMedium> Cancelar</LinkMedium>
+          </CancelButton>
         </ModalScheduleQuery>
       </ModalTransparent>
     </Modal>

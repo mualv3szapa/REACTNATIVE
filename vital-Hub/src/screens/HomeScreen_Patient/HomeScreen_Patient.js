@@ -23,6 +23,7 @@ import {
 } from "../../components/ModalScheduleAppointment/ModalScheduleAppointment";
 import { FontAwesome } from "@expo/vector-icons";
 import { ScheduleAppointmentModal } from "../../components/ModalScheduleAppointment/ScheduleAppointmentModal";
+import { DoctorOverview } from "../../components/DoctorOverview/DoctorOverview";
 
 const Consultas = [
   { id: 1, nome: "Carlos", situacao: "pendente" },
@@ -35,9 +36,9 @@ const Consultas = [
 export const HomeScreen_Patient = () => {
   const [statusLista, setStatusLista] = useState("pendente");
   const [showModalCancel, setshowModalCancel] = useState(false);
-  const [showModalAppointment, setshowModalAppointment] = useState(false);
+  const [showDoctorOverview, setShowDoctorOverview] = useState(false);
   const [showModalScheduleAppointment, setShowModalScheduleAppointment] =
-    useState(true);
+    useState(false);
 
   return (
     <Container>
@@ -89,7 +90,7 @@ export const HomeScreen_Patient = () => {
             <AppointmentCardDoctor
               situacao={item.situacao}
               onPressCancel={() => setshowModalCancel(true)}
-              onPressAppointment={() => setshowModalAppointment(true)}
+              onPressAppointment={() => setShowDoctorOverview(true)}
             />
           )
         }
@@ -101,9 +102,9 @@ export const HomeScreen_Patient = () => {
         setShowModalCancel={setshowModalCancel}
       />
 
-      <MedicalRecordModal
-        visible={showModalAppointment}
-        setshowModalAppointment={setshowModalAppointment}
+      <DoctorOverview
+        visible={showDoctorOverview}
+        setShowDoctorOverview={setShowDoctorOverview}
       />
 
       <ModalSCheduleAppointmentBox>
