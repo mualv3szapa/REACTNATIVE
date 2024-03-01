@@ -37,8 +37,8 @@ export const HomeScreen_Patient = () => {
   const [statusLista, setStatusLista] = useState("pendente");
   const [showModalCancel, setshowModalCancel] = useState(false);
   const [showDoctorOverview, setShowDoctorOverview] = useState(false);
-  const [showModalScheduleAppointment, setShowModalScheduleAppointment] =
-    useState(false);
+  const [showModalScheduleAppointment, setShowModalScheduleAppointment] = useState(false);
+    
 
   return (
     <Container>

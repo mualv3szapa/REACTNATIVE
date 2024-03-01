@@ -1,7 +1,4 @@
-// import { useState } from "react";
-import { View } from "react-native";
 import {
-  ButtonContinue,
   Days,
   DaysText,
   HighLightListBox,

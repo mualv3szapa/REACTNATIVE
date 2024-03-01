@@ -96,14 +96,14 @@ export const HomeScreen_Doctor = () => {
 
       {/* modal cancelar */}
 
-      <CancelattionModal 
+      <CancelattionModal
         visible={showModalCancel}
         setShowModalCancel={setshowModalCancel}
       />
 
       {/* modal ver prontuário */}
 
-      <MedicalRecordModal 
+      <MedicalRecordModal
         visible={showModalAppointment}
         setshowModalAppointment={setshowModalAppointment}
       />
