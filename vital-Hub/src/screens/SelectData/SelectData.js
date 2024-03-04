@@ -2,15 +2,13 @@ import { AntDesign } from "@expo/vector-icons";
 import CalendarSelectData from "../../components/CalendarSelectData/CalendarSelectData";
 import { Container } from "../../components/Container/Container";
 import {
-  ButtonContinueSelectData,
   SelectDataSelectHourBox,
   SelectDataTitle,
   SelectHour,
   SelectHourButtonTitle,
   SelectHourTitle,
 } from "./Style";
-import { ButtonContinue } from "../../components/HighlightList/Style";
-import { ButtonTitle } from "../../components/Button/Button";
+import { Button, ButtonTitle } from "../../components/Button/Button";
 import {
   ButtonLinkMediumCancel,
   LinkMedium,
@@ -19,6 +17,7 @@ import { useState } from "react";
 import { ModalConfirmation } from "../../components/ModalConfirmation/ModalConfirmation";
 
 export const SelectData = () => {
+  
   const [showModalQuery, setShowModalQuery] = useState(false);
 
   return (
@@ -35,9 +34,9 @@ export const SelectData = () => {
         </SelectHour>
       </SelectDataSelectHourBox>
 
-      <ButtonContinueSelectData onPress={() => setShowModalQuery(true)}>
+      <Button onPress={() => setShowModalQuery(true)}>
         <ButtonTitle>Continuar</ButtonTitle>
-      </ButtonContinueSelectData>
+      </Button>
 
       <ButtonLinkMediumCancel>
         <LinkMedium>Cancelar</LinkMedium>
@@ -47,7 +46,6 @@ export const SelectData = () => {
         visible={showModalQuery}
         setShowModalQuery={setShowModalQuery}
       />
-
     </Container>
   );
 };

@@ -36,4 +36,3 @@ export const SelectHourButtonTitle = styled.Text`
   color: #34898f;
 `;
 
-export const ButtonContinueSelectData = styled(Button)``;
