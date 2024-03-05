@@ -21,6 +21,9 @@ import {
 import { TouchableOpacity } from "react-native";
 
 export const Login = ({ navigation }) => {
+  async function Login() {
+    navigation.navigate("Main");
+  }
   return (
     <Container>
       <Logo source={require("../../assets/logo.png")} />
@@ -28,10 +31,10 @@ export const Login = ({ navigation }) => {
       <Input placeholder="Email" />
       <Input placeholder="Senha" />
 
-      <ButtonLinkMedium onPress={() => navigation.navigate("PasswordForgot")}>
+      <ButtonLinkMedium>
         <LinkMedium>Esqueceu sua senha?</LinkMedium>
       </ButtonLinkMedium>
-      <Button>
+      <Button onPress={(e) => Login()}>
         <ButtonTitle>Entrar</ButtonTitle>
       </Button>
 
@@ -48,7 +51,7 @@ export const Login = ({ navigation }) => {
 
       <ContentAccount>
         <TextAccount>Não tem conta?</TextAccount>
-        <TouchableOpacity onPress={() => navigation.navigate("CreateAccount")}>
+        <TouchableOpacity onPress={() => navigation.replace("CreateAccount")}>
           <TextAccount2>Crie uma Agora</TextAccount2>
         </TouchableOpacity>
       </ContentAccount>

@@ -30,4 +30,5 @@ export const ModalText2 = styled.Text`
   line-height: 22px;
   text-align: center;
   margin-top: 10px;
+  font-family: "Quicksand_500Medium";
 `;
