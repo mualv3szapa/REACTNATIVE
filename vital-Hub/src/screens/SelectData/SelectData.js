@@ -15,8 +15,9 @@ import {
 } from "../../components/LinkMedium/LinkMedium";
 import { useState } from "react";
 import { ModalConfirmation } from "../../components/ModalConfirmation/ModalConfirmation";
+import InputSelect from "../../components/InputSelect/InputSelect";
 
-export const SelectData = () => {
+export const SelectData = ({navigation}) => {
   
   const [showModalQuery, setShowModalQuery] = useState(false);
 
@@ -26,13 +27,7 @@ export const SelectData = () => {
 
       <CalendarSelectData />
 
-      <SelectDataSelectHourBox>
-        <SelectHourTitle>Selecione um horário disponível</SelectHourTitle>
-        <SelectHour>
-          <SelectHourButtonTitle>Selecionar horário</SelectHourButtonTitle>
-          <AntDesign name="caretdown" size={22} color={"#34898F"} />
-        </SelectHour>
-      </SelectDataSelectHourBox>
+      <InputSelect />
 
       <Button onPress={() => setShowModalQuery(true)}>
         <ButtonTitle>Continuar</ButtonTitle>
@@ -45,6 +40,7 @@ export const SelectData = () => {
       <ModalConfirmation
         visible={showModalQuery}
         setShowModalQuery={setShowModalQuery}
+        navigation={navigation}
       />
     </Container>
   );

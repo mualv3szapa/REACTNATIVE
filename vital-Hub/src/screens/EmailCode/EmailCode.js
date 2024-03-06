@@ -27,7 +27,7 @@ export const EmailCode = ({ navigation }) => {
         <InputCode placeholder="0" />
       </InputCodeBox>
 
-      <Button onPress={() => navigation.navigate("PasswordReset")}>
+      <Button onPress={() => navigation.replace("PasswordReset")}>
         <ButtonTitle>continuar</ButtonTitle>
       </Button>
 

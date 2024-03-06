@@ -13,6 +13,7 @@ import {
   TextBold,
   ViewRow,
 } from "./Style";
+import { TouchableOpacity } from "react-native";
 
 export const AppointmentCard = ({
   situacao = "pendente",
@@ -63,6 +64,7 @@ export const AppointmentCard = ({
 };
 
 export const AppointmentCardDoctor = ({
+  navigation,
   situacao = "pendente",
   onPressCancel,
   onPressAppointment,
@@ -70,17 +72,20 @@ export const AppointmentCardDoctor = ({
   return (
     // container principal
     <ContainerCardsList>
-      <ProfileImage source={require("../../assets/DoctorImageSmall.png")} />
-
+      <TouchableOpacity onPress={onPressAppointment}>
+        <ProfileImage source={require("../../assets/DoctorImageSmall.png")} />
+      </TouchableOpacity>
       <ContentCard>
-        <DataProfileCard>
-          <ProfileName>Dr. Claudio</ProfileName>
+        <TouchableOpacity onPress={onPressAppointment}>
+          <DataProfileCard>
+            <ProfileName>Dr. Claudio</ProfileName>
 
-          <ProfileData>
-            <TextAge>22 anos</TextAge>
-            <TextBold>Rotina</TextBold>
-          </ProfileData>
-        </DataProfileCard>
+            <ProfileData>
+              <TextAge>22 anos</TextAge>
+              <TextBold>Rotina</TextBold>
+            </ProfileData>
+          </DataProfileCard>
+        </TouchableOpacity>
 
         <ViewRow>
           <ClockCard situacao={situacao}>
@@ -100,7 +105,7 @@ export const AppointmentCardDoctor = ({
               <ButtonText situacao={situacao}>Cancelar</ButtonText>
             </ButtonCard>
           ) : (
-            <ButtonCard onPress={onPressAppointment}>
+            <ButtonCard onPress={() => navigation.navigate("ViewPrescription")}>
               <ButtonText situacao={situacao}>Ver prontuário</ButtonText>
             </ButtonCard>
           )}

@@ -24,6 +24,7 @@ import {
 import { FontAwesome } from "@expo/vector-icons";
 import { ScheduleAppointmentModal } from "../../components/ModalScheduleAppointment/ScheduleAppointmentModal";
 import { DoctorOverview } from "../../components/DoctorOverview/DoctorOverview";
+import { TouchableOpacity } from "react-native";
 
 const Consultas = [
   { id: 1, nome: "Carlos", situacao: "pendente" },
@@ -33,24 +34,26 @@ const Consultas = [
   { id: 5, nome: "Carlos", situacao: "cancelado" },
 ];
 
-export const HomeScreen_Patient = () => {
+export const HomeScreen_Patient = ({ navigation }) => {
   const [statusLista, setStatusLista] = useState("pendente");
   const [showModalCancel, setshowModalCancel] = useState(false);
   const [showDoctorOverview, setShowDoctorOverview] = useState(false);
-  const [showModalScheduleAppointment, setShowModalScheduleAppointment] = useState(false);
-    
+  const [showModalScheduleAppointment, setShowModalScheduleAppointment] =
+    useState(false);
 
   return (
     <Container>
       <BlueGradientHeader>
-        {/* Nesse caso é do paciente porém estou reutilizando a do doctor */}
-        <DoctorInfoBoxHeader>
-          <DoctorImageHeader source={require("../../assets/UserPhoto.png")} />
-          <DoctorInfoBoxTextHeader>
-            <Welcome>Bem Vindo!</Welcome>
-            <DoctorNameHeader>Richard Kosta</DoctorNameHeader>
-          </DoctorInfoBoxTextHeader>
-        </DoctorInfoBoxHeader>
+        <TouchableOpacity onPress={() => navigation.replace("UserScreen")}>
+          {/* Nesse caso é do paciente porém estou reutilizando a do doctor */}
+          <DoctorInfoBoxHeader>
+            <DoctorImageHeader source={require("../../assets/UserPhoto.png")} />
+            <DoctorInfoBoxTextHeader>
+              <Welcome>Bem Vindo!</Welcome>
+              <DoctorNameHeader>Richard Kosta</DoctorNameHeader>
+            </DoctorInfoBoxTextHeader>
+          </DoctorInfoBoxHeader>
+        </TouchableOpacity>
         <Icon
           name="notifications"
           type="ionicons"
@@ -91,6 +94,7 @@ export const HomeScreen_Patient = () => {
               situacao={item.situacao}
               onPressCancel={() => setshowModalCancel(true)}
               onPressAppointment={() => setShowDoctorOverview(true)}
+              navigation={navigation}
             />
           )
         }
@@ -105,6 +109,7 @@ export const HomeScreen_Patient = () => {
       <DoctorOverview
         visible={showDoctorOverview}
         setShowDoctorOverview={setShowDoctorOverview}
+        navigation={navigation}
       />
 
       <ModalSCheduleAppointmentBox>
@@ -118,6 +123,7 @@ export const HomeScreen_Patient = () => {
       <ScheduleAppointmentModal
         visible={showModalScheduleAppointment}
         setShowModalScheduleAppointment={setShowModalScheduleAppointment}
+        navigation={navigation}
       />
     </Container>
   );

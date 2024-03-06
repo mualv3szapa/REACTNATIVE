@@ -1,12 +1,18 @@
 import { useState } from "react";
 import { Container } from "../../components/Container/Container";
 import { TitleSelectDoctor } from "./Style";
-import { ButtonContinue, HighLightListContainer } from "../../components/HighlightList/Style";
+import {
+  ButtonContinue,
+  HighLightListContainer,
+} from "../../components/HighlightList/Style";
 import { HighlightListDoctor } from "../../components/HighlightListDoctor/HighlightListDoctor";
 import { ButtonTitle } from "../../components/Button/Button";
-import { LinkMedium, ButtonLinkMediumCancel } from "../../components/LinkMedium/LinkMedium";
+import {
+  LinkMedium,
+  ButtonLinkMediumCancel,
+} from "../../components/LinkMedium/LinkMedium";
 
-export const SelectDoctor = () => {
+export const SelectDoctor = ({ navigation }) => {
   const [statusList, setStatusList] = useState("");
 
   return (
@@ -36,7 +42,7 @@ export const SelectDoctor = () => {
           onPress={() => setStatusList("selected2")}
         />
 
-        <ButtonContinue>
+        <ButtonContinue onPress={() => navigation.replace("SelectData")}>
           <ButtonTitle>Continuar</ButtonTitle>
         </ButtonContinue>
 

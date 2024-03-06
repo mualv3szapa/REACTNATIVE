@@ -20,6 +20,7 @@ import { ButtonLinkMediumCancel, LinkMedium } from "../LinkMedium/LinkMedium";
 import { ButtonTitle } from "../Button/Button";
 
 export const ScheduleAppointmentModal = ({
+  navigation,
   visible,
   setShowModalScheduleAppointment,
   ...rest
@@ -72,7 +73,7 @@ export const ScheduleAppointmentModal = ({
             />
           </QueryQuestions>
 
-          <ButtonConfirmSchedule>
+          <ButtonConfirmSchedule onPress={() => navigation.navigate("SelectClinic")}>
             <ButtonTitle>CONTINUAR</ButtonTitle>
           </ButtonConfirmSchedule>
 

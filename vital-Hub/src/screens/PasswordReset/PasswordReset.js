@@ -5,7 +5,7 @@ import { Logo } from "../../components/Logo/Logo";
 import { Subtitle } from "../../components/Subtitle/Subtitle";
 import { Title } from "../../components/Title/Title";
 
-export const PasswordReset = () => {
+export const PasswordReset = ({ navigation }) => {
   return (
     <Container>
       <Logo source={require("../../assets/logo.png")} />
@@ -13,7 +13,7 @@ export const PasswordReset = () => {
       <Subtitle>Insira e confirme sua nova senha</Subtitle>
       <Input placeholder="Nova senha" />
       <Input placeholder="Confirmar nova senha" />
-      <Button>
+      <Button onPress={() => navigation.replace("Login")}>
         <ButtonTitle>Confirmar nova senha</ButtonTitle>
       </Button>
     </Container>

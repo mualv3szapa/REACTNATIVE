@@ -9,7 +9,7 @@ import { Title } from "../Title/Title";
 import { Button, ButtonTitle } from "../Button/Button";
 import { ButtonLinkMediumCancel, LinkMedium } from "../LinkMedium/LinkMedium";
 
-export const DoctorOverview = ({ setShowDoctorOverview, visible, ...rest }) => {
+export const DoctorOverview = ({ navigation, setShowDoctorOverview, visible, ...rest }) => {
   return (
     <Modal {...rest} visible={visible} transparent={true} animationType="fade">
       {/* Reutilizando código de outros componentes */}
@@ -24,7 +24,7 @@ export const DoctorOverview = ({ setShowDoctorOverview, visible, ...rest }) => {
             <ModalText2>niccole.sarga@gmail.com</ModalText2>
           </YearEmailBox>
 
-          <Button>
+          <Button onPress={() => navigation.navigate("ConsultationLocation")}>
             <ButtonTitle>Ver Local da consulta</ButtonTitle>
           </Button>
 

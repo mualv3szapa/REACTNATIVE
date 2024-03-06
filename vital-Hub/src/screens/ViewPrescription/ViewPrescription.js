@@ -22,7 +22,7 @@ import {
   LinkMedium,
 } from "../../components/LinkMedium/LinkMedium";
 
-export const ViewPrescription = () => {
+export const ViewPrescription = ({navigation}) => {
   return (
     <ContainerUser>
       <Container>
@@ -98,7 +98,7 @@ export const ViewPrescription = () => {
             </DoctorPrescriptionText>
           </DoctorPrescriptionBox>
         </DoctorPrescriptionContainer>
-        <ButtonLinkMediumCancel>
+        <ButtonLinkMediumCancel onPress={() => navigation.replace("HomeScreen_Patient")}>
           <LinkMedium>Voltar</LinkMedium>
         </ButtonLinkMediumCancel>
       </Container>

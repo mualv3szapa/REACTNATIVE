@@ -19,7 +19,7 @@ import {
   MapsImage,
 } from "./Style";
 
-export const ConsultationLocation = () => {
+export const ConsultationLocation = ({navigation}) => {
   return (
     <Container>
       <MapsImage source={require("../../assets/mapsImage.png")} />
@@ -45,7 +45,7 @@ export const ConsultationLocation = () => {
           </InfoBoxSmall>
         </InfoBox2>
 
-        <ButtonLinkMediumCancel>
+        <ButtonLinkMediumCancel onPress={() => navigation.replace("HomeScreen_Patient")}>
             <LinkMedium>Voltar</LinkMedium>
         </ButtonLinkMediumCancel>
       </LocationInfoBox>

@@ -36,6 +36,7 @@ export const InputCode = styled.TextInput.attrs({
   border: 2px solid #77cacf;
   border-radius: 5px;
   padding-left: 20px;
+  color: #34898f;
 `;
 
 export const InputUserEdit = styled.TextInput.attrs({

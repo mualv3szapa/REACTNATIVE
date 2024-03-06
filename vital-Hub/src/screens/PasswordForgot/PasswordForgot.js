@@ -16,7 +16,7 @@ export const PasswordForgot = ({ navigation }) => {
       </Subtitle2>
 
       <Input placeholder="E-mail" />
-      <Button onPress={() => navigation.navigate("EmailCode")}>
+      <Button  onPress={() => navigation.replace("EmailCode")} >
         <ButtonTitle>Continuar</ButtonTitle>
       </Button>
     </Container>

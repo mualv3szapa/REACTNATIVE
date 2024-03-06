@@ -14,7 +14,7 @@ import { useEffect } from "react";
 import { Button, ButtonTitle } from "../Button/Button";
 import { ButtonLinkMediumCancel, LinkMedium } from "../LinkMedium/LinkMedium";
 
-export const ModalConfirmation = ({ visible, setShowModalQuery, ...rest }) => {
+export const ModalConfirmation = ({ navigation, visible, setShowModalQuery, ...rest }) => {
   // useEffect(() => {
   //   console.log(visible)
   // },[]);
@@ -49,7 +49,7 @@ export const ModalConfirmation = ({ visible, setShowModalQuery, ...rest }) => {
             <ModalInfoBoxSubtitle>Rotina</ModalInfoBoxSubtitle>
           </ModalInfoBox>
 
-          <Button>
+          <Button onPress={() => navigation.navigate("HomeScreen_Patient")}>
             <ButtonTitle>Continuar</ButtonTitle>
           </Button>
 

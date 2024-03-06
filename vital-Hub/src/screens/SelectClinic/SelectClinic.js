@@ -1,12 +1,18 @@
 import { useState } from "react";
 import { Container } from "../../components/Container/Container";
 import HighLightList from "../../components/HighlightList/HighLightList";
-import { ButtonContinue, HighLightListContainer } from "../../components/HighlightList/Style";
+import {
+  ButtonContinue,
+  HighLightListContainer,
+} from "../../components/HighlightList/Style";
 import { TitleSelectClinic } from "./Style";
 import { ButtonTitle } from "../../components/Button/Button";
-import { ButtonLinkMediumCancel, LinkMedium } from "../../components/LinkMedium/LinkMedium";
+import {
+  ButtonLinkMediumCancel,
+  LinkMedium,
+} from "../../components/LinkMedium/LinkMedium";
 
-export const SelectClinic = () => {
+export const SelectClinic = ({ navigation }) => {
   const [statusList, setStatusList] = useState("");
   return (
     <Container>
@@ -30,7 +36,7 @@ export const SelectClinic = () => {
           dayText={"Seg - Sex"}
         />
         <HighLightList
-          cardTitle={"Clinica Villa Lobos"}       
+          cardTitle={"Clinica Villa Lobos"}
           cardSubtitle={"Taboão - SP"}
           clickButton={statusList === "selected2"}
           onPress={() => setStatusList("selected2")}
@@ -38,7 +44,7 @@ export const SelectClinic = () => {
           dayText={"Seg - Sex"}
         />
         <HighLightList
-          cardTitle={"Clinica Villa Lobos"}       
+          cardTitle={"Clinica Villa Lobos"}
           cardSubtitle={"Taboão - SP"}
           clickButton={statusList === "selected2"}
           onPress={() => setStatusList("selected2")}
@@ -47,10 +53,10 @@ export const SelectClinic = () => {
         />
       </HighLightListContainer>
 
-      <ButtonContinue>
+      <ButtonContinue onPress={() => navigation.replace("SelectDoctor")}>
         <ButtonTitle>Continuar</ButtonTitle>
       </ButtonContinue>
-      
+
       <ButtonLinkMediumCancel>
         <LinkMedium>Cancelar</LinkMedium>
       </ButtonLinkMediumCancel>

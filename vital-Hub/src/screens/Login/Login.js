@@ -31,7 +31,7 @@ export const Login = ({ navigation }) => {
       <Input placeholder="Email" />
       <Input placeholder="Senha" />
 
-      <ButtonLinkMedium>
+      <ButtonLinkMedium onPress={() => navigation.replace("PasswordForgot")}>
         <LinkMedium>Esqueceu sua senha?</LinkMedium>
       </ButtonLinkMedium>
       <Button onPress={(e) => Login()}>

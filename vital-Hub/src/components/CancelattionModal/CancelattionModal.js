@@ -16,7 +16,7 @@ export const CancelattionModal = ({ visible, setShowModalCancel, ...rest }) => {
             seu horário, deseja mesmo cancelar essa consulta?
           </ModalText>
 
-          <Button>
+          <Button onPress={() => setShowModalCancel(false)}>
             <ButtonTitle>Confirmar</ButtonTitle>
           </Button>
 
