@@ -33,6 +33,7 @@ import { SelectData } from "./src/screens/SelectData/SelectData";
 import { ConsultationLocation } from "./src/screens/ConsultationLocation/ConsultationLocation";
 import { ViewPrescription } from "./src/screens/ViewPrescription/ViewPrescription";
 import { Main } from "./src/screens/Main/Main";
+import { UserScreen_Doctor } from "./src/screens/UserScreen_Doctor/UserScreen";
 
 
 const Stack = createNativeStackNavigator();
@@ -94,6 +95,11 @@ export default function App() {
           name="UserScreen"
           component={UserScreen}
           options={{ title: "UserScreen" }}
+        />
+        <Stack.Screen
+          name="UserScreen_Doctor"
+          component={UserScreen_Doctor}
+          options={{ title: "UserScreen_Doctor" }}
         />
         <Stack.Screen
           name="UserScreenEdit"

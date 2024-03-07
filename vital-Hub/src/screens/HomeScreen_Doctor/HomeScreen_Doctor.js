@@ -25,7 +25,7 @@ const Consultas = [
   { id: 5, nome: "Carlos", situacao: "cancelado" },
 ];
 
-export const HomeScreen_Doctor = () => {
+export const HomeScreen_Doctor = ({ navigation }) => {
   // state para o estado da lista(cards)
   const [statusLista, setStatusLista] = useState("pendente");
 
@@ -106,6 +106,7 @@ export const HomeScreen_Doctor = () => {
       <MedicalRecordModal
         visible={showModalAppointment}
         setshowModalAppointment={setshowModalAppointment}
+        navigation={navigation}
       />
     </Container>
     // </ContainerUser>

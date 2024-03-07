@@ -10,6 +10,7 @@ import { Title } from "../Title/Title";
 import { ModalUserPhoto, YearEmailBox } from "./Style";
 
 export const MedicalRecordModal = ({
+  navigation,
   setshowModalAppointment,
   visible,
   ...rest
@@ -27,7 +28,7 @@ export const MedicalRecordModal = ({
             <ModalText2>niccole.sarga@gmail.com</ModalText2>
           </YearEmailBox>
 
-          <Button>
+          <Button onPress={() => navigation.navigate("MedicalRecordScreen")}>
             <ButtonTitle>Inserir prontuario</ButtonTitle>
           </Button>
 

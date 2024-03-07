@@ -2,17 +2,19 @@ import {
   createBottomTabNavigator,
   treateBottonTabNavigator,
 } from "@react-navigation/bottom-tabs";
-import { HomeScreen_Patient } from "../HomeScreen_Patient/HomeScreen_Patient";
+// import { HomeScreen_Patient } from "../HomeScreen_Patient/HomeScreen_Patient";
 import { UserScreen } from "../UserScreen/UserScreen";
 import { ContentIcon, TextIcon } from "./Style";
 import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
+import { HomeScreen_Doctor } from "../HomeScreen_Doctor/HomeScreen_Doctor";
+import { UserScreen_Doctor } from "../UserScreen_Doctor/UserScreen";
 
 const BottomTab = createBottomTabNavigator();
 
 export const Main = () => {
   return (
     <BottomTab.Navigator
-      initialRouteName="Home"
+      initialRouteName="HomeScreen_Doctor"
       screenOptions={({ route }) => ({
         tabBarStyle: {
           backgroundColor: "#ffffff",
@@ -24,7 +26,7 @@ export const Main = () => {
         headerShown: false,
 
         tabBarIcon: ({ focused }) => {
-          if (route.name === "Home") {
+          if (route.name === "HomeScreen_Doctor") {
             return (
               <ContentIcon
                 tabBarActiveBackgroundColor={
@@ -50,8 +52,8 @@ export const Main = () => {
         },
       })}
     >
-      <BottomTab.Screen name="Home" component={HomeScreen_Patient} />
-      <BottomTab.Screen name="Perfil" component={UserScreen} />
+      <BottomTab.Screen name="HomeScreen_Doctor" component={HomeScreen_Doctor} />
+      <BottomTab.Screen name="PerfilDoutor" component={UserScreen_Doctor} />
     </BottomTab.Navigator>
   );
 };
