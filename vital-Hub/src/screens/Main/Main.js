@@ -8,6 +8,7 @@ import { ContentIcon, TextIcon } from "./Style";
 import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
 import { HomeScreen_Doctor } from "../HomeScreen_Doctor/HomeScreen_Doctor";
 import { UserScreen_Doctor } from "../UserScreen_Doctor/UserScreen";
+import { HomeScreen_Patient } from "../HomeScreen_Patient/HomeScreen_Patient";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -52,8 +53,13 @@ export const Main = () => {
         },
       })}
     >
-      <BottomTab.Screen name="HomeScreen_Doctor" component={HomeScreen_Doctor} />
-      <BottomTab.Screen name="PerfilDoutor" component={UserScreen_Doctor} />
+      <BottomTab.Screen
+        name="HomeScreen_Pacient"
+        component={HomeScreen_Patient}
+      />
+      <BottomTab.Screen name="PerfilPaciente" component={UserScreen} />
+      {/* <BottomTab.Screen name="HomeScreen_Doctor" component={HomeScreen_Doctor} />
+      <BottomTab.Screen name="PerfilDoutor" component={UserScreen_Doctor} /> */}
     </BottomTab.Navigator>
   );
 };

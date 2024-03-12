@@ -1,5 +1,6 @@
 import { Container } from "../../components/Container/Container";
 import { ButtonLinkMediumCancel, LinkMedium } from "../../components/LinkMedium/LinkMedium";
+import { Maps } from "../../components/Maps/Maps";
 import { Title } from "../../components/Title/Title";
 import {
   InfoBox2,
@@ -19,10 +20,13 @@ import {
   MapsImage,
 } from "./Style";
 
+
 export const ConsultationLocation = ({navigation}) => {
   return (
     <Container>
-      <MapsImage source={require("../../assets/mapsImage.png")} />
+      {/* <MapsImage source={require("../../assets/mapsImage.png")} /> */}
+
+      <Maps />
 
       <LocationInfoBox>
         <Title>Clínica Natureh</Title>

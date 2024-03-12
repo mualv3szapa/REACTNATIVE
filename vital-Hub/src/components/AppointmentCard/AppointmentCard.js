@@ -14,6 +14,7 @@ import {
   ViewRow,
 } from "./Style";
 import { TouchableOpacity } from "react-native";
+import { useState } from "react";
 
 export const AppointmentCard = ({
   situacao = "pendente",
