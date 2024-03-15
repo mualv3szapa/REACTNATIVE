@@ -14,7 +14,12 @@ import { useEffect } from "react";
 import { Button, ButtonTitle } from "../Button/Button";
 import { ButtonLinkMediumCancel, LinkMedium } from "../LinkMedium/LinkMedium";
 
-export const ModalConfirmation = ({ navigation, visible, setShowModalQuery, ...rest }) => {
+export const ModalConfirmation = ({
+  navigation,
+  visible,
+  setShowModalQuery,
+  ...rest
+}) => {
   // useEffect(() => {
   //   console.log(visible)
   // },[]);

@@ -21,8 +21,15 @@ import {
   ButtonLinkMediumCancel,
   LinkMedium,
 } from "../../components/LinkMedium/LinkMedium";
+import { useEffect, useState } from "react";
+import { CameraModal } from "../../components/CameraModal.js/CameraModal";
+import { Camera } from "expo-camera";
 
-export const ViewPrescription = ({navigation}) => {
+export const ViewPrescription = ({ navigation }) => {
+  const [showCamera, setShowModalCamera] = useState(false);
+
+  
+
   return (
     <ContainerUser>
       <Container>
@@ -79,7 +86,7 @@ export const ViewPrescription = ({navigation}) => {
         </DoctorPrescriptionContainer>
 
         <SendCancelButtonContainer>
-          <SendButton>
+          <SendButton onPress={() => setShowModalCamera(true)}>
             <MaterialCommunityIcons
               name="camera-plus-outline"
               color={"#ffffff"}
@@ -98,9 +105,16 @@ export const ViewPrescription = ({navigation}) => {
             </DoctorPrescriptionText>
           </DoctorPrescriptionBox>
         </DoctorPrescriptionContainer>
-        <ButtonLinkMediumCancel onPress={() => navigation.replace("HomeScreen_Patient")}>
+        <ButtonLinkMediumCancel
+          onPress={() => navigation.replace("HomeScreen_Patient")}
+        >
           <LinkMedium>Voltar</LinkMedium>
         </ButtonLinkMediumCancel>
+
+        <CameraModal
+          visible={showCamera}
+          setShowModalCamera={setShowModalCamera}
+        />
       </Container>
     </ContainerUser>
   );

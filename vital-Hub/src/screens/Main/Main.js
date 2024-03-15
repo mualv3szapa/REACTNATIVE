@@ -58,7 +58,10 @@ export const Main = () => {
         component={HomeScreen_Patient}
       />
       <BottomTab.Screen name="PerfilPaciente" component={UserScreen} />
-      {/* <BottomTab.Screen name="HomeScreen_Doctor" component={HomeScreen_Doctor} />
+      {/* <BottomTab.Screen
+        name="HomeScreen_Doctor"
+        component={HomeScreen_Doctor}
+      />
       <BottomTab.Screen name="PerfilDoutor" component={UserScreen_Doctor} /> */}
     </BottomTab.Navigator>
   );
