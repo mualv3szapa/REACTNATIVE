@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CameraModalButtonView = styled.View`
   margin-top: 580px;
   flex: 1;
-  background-color: transparent;
+  background-color: white;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,7 @@ export const CameraModalButtonTakePhoto = styled.TouchableOpacity`
 
   width: 80px;
   height: 80px;
-  border-radius: 4%;
+  border-radius: 40px;
   background-color: lightslategray;
 
   justify-content: center;
