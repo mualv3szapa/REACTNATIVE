@@ -114,6 +114,7 @@ export const ViewPrescription = ({ navigation }) => {
         <CameraModal
           visible={showCamera}
           setShowModalCamera={setShowModalCamera}
+          setShowModalCameraButton={false}
         />
       </Container>
     </ContainerUser>

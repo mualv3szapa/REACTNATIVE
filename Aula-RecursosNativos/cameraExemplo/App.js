@@ -203,11 +203,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  btnCancel: {
-    padding: 20,
-    borderRadius: 15,
-    backgroundColor: "transparent",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+  // btnCancel: {
+  //   padding: 20,
+  //   borderRadius: 15,
+  //   backgroundColor: "transparent",
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  // },
 });

@@ -1,11 +1,13 @@
 import { CameraModalButtonTakePhoto, CameraModalButtonView, UmCharme } from "./Style";
 
-export const CameraModalButton = () => {
+export const CameraModalButton = ({onPress}) => {
     return(
         <CameraModalButtonView>
-            <CameraModalButtonTakePhoto>
+            <CameraModalButtonTakePhoto onPress={onPress}>
                 <UmCharme></UmCharme>
             </CameraModalButtonTakePhoto>
+
+            
         </CameraModalButtonView>
     );
 }
