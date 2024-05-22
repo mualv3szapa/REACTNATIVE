@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Image, Modal, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { CameraModalButton } from "./CameraModalComponents/CameraModalButton/CameraModalButton";
 
-export const CameraModal = ({ visible, setShowModalCamera, ...rest }) => {
+export const CameraModal = ({ visible, onPress, setShowModalCamera, ...rest }) => {
   const cameraRef = useRef(null);
 
   const [openModal, setOpenModal] = useState(null);
@@ -25,6 +25,11 @@ export const CameraModal = ({ visible, setShowModalCamera, ...rest }) => {
   function ClearPhoto() {
     setPhoto(null);
     setOpenModal(false);
+  }
+  function SendPhoto() {
+    setPhoto(null);
+    setOpenModal(false);
+    setShowModalCamera(false);
   }
 
   useEffect(() => {
@@ -79,7 +84,7 @@ export const CameraModal = ({ visible, setShowModalCamera, ...rest }) => {
                 Cancelar imagem
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.btn} onPress={() => ClearPhoto()}>
+            <TouchableOpacity style={styles.btn} onPress={() => SendPhoto()}>
               <Text style={{
                 color: "#ffffff",
                 fontSize: 16,

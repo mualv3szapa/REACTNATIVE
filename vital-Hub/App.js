@@ -35,7 +35,6 @@ import { ViewPrescription } from "./src/screens/ViewPrescription/ViewPrescriptio
 import { Main } from "./src/screens/Main/Main";
 import { UserScreen_Doctor } from "./src/screens/UserScreen_Doctor/UserScreen";
 
-
 const Stack = createNativeStackNavigator();
 
 export default function App() {
