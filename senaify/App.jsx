@@ -55,8 +55,8 @@
       }
 
       // Informando as chaves de validacao
-      const _clientId = "50772b8625654518928a0103d70d0dd4";
-      const _clientSecret = "45b54df19073494196b0424f9273f498";
+      const _clientId = "18042d57b37e4d538711248620e60814";
+      const _clientSecret = "262fb3d3a69341b0b657da4854f3324a";
 
       // Criando o parametro de captura de acesso
       const formUrl = queryString.stringify({
